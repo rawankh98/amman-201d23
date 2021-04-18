@@ -61,14 +61,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let sum = a + b + c;
-  let multiply = a * b * c;
-  let msg1 =  a + ' and ' + b + ' and ' + c + ' sum to ' + sum + '.';
-  let msg2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply + '.';
-  return [sum, multiply, msg1, msg2]
+  let summation = sum(sum(a, b)[0], c)[0];
+  let multiple = multiply(multiply(a, b)[0], c)[0];
+  let msg1 = a +' and '+ b +' and '+ c +' sum to '+ summation +'.';
+  let msg2 = 'The product of '+ a +' and '+ b +' and '+ c +' is '+ multiple +'.';
+  return [summation, multiple, msg1, msg2];
 }
 
-console.log(sumAndMultiply(1,2,3));
+console.log(sumAndMultiply(4,7,5));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
  testSumAndMultiply(4,7,5);
